@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Moussa GUENANI</title>
+    <link>https://moussague.github.io/</link>
+    <description>Recent content on Moussa GUENANI</description>
+    <generator>Hugo -- 0.139.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Nov 2024 00:09:43 +0100</lastBuildDate>
+    <atom:link href="https://moussague.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://moussague.github.io/posts/my-first-post/</link>
+      <pubDate>Thu, 21 Nov 2024 00:09:43 +0100</pubDate>
+      <guid>https://moussague.github.io/posts/my-first-post/</guid>
+      <description>&lt;p&gt;Hi!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
