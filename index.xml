@@ -9,11 +9,20 @@
     <lastBuildDate>Thu, 21 Nov 2024 00:09:43 +0100</lastBuildDate>
     <atom:link href="https://moussague.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>https://moussague.github.io/posts/my-first-post/</link>
+      <title>Coming soon</title>
+      <link>https://moussague.github.io/posts/bridging_the_gap/</link>
       <pubDate>Thu, 21 Nov 2024 00:09:43 +0100</pubDate>
-      <guid>https://moussague.github.io/posts/my-first-post/</guid>
-      <description>&lt;p&gt;Hi!&lt;/p&gt;</description>
+      <guid>https://moussague.github.io/posts/bridging_the_gap/</guid>
+      <description>&lt;p&gt;Hi!&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+    <item>
+      <title>Resources</title>
+      <link>https://moussague.github.io/resources/</link>
+      <pubDate>Wed, 20 Nov 2024 21:34:00 +0100</pubDate>
+      <guid>https://moussague.github.io/resources/</guid>
+      <description>As a developer and researcher, I rely on a variety of tools to streamline my workflow, enhance my productivity. This page is a curated collection of my essential resources, categorized for easy navigation. I hope you find them as valuable as I do!</description>
     </item>
   </channel>
 </rss>

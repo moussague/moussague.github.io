@@ -9,11 +9,13 @@
     <lastBuildDate>Thu, 21 Nov 2024 00:09:43 +0100</lastBuildDate>
     <atom:link href="https://moussague.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My First Post</title>
-      <link>https://moussague.github.io/posts/my-first-post/</link>
+      <title>Coming soon</title>
+      <link>https://moussague.github.io/posts/bridging_the_gap/</link>
       <pubDate>Thu, 21 Nov 2024 00:09:43 +0100</pubDate>
-      <guid>https://moussague.github.io/posts/my-first-post/</guid>
-      <description>&lt;p&gt;Hi!&lt;/p&gt;</description>
+      <guid>https://moussague.github.io/posts/bridging_the_gap/</guid>
+      <description>&lt;p&gt;Hi!&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;</description>
     </item>
   </channel>
 </rss>
