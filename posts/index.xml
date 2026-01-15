@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Moussa GUENANI</title>
+    <link>https://www.guenanispace.com/posts/</link>
+    <description>Recent content in Posts on Moussa GUENANI</description>
+    <generator>Hugo -- 0.154.4</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 13 Nov 2025 16:10:45 +0100</lastBuildDate>
+    <atom:link href="https://www.guenanispace.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, it&#39;s me</title>
+      <link>https://www.guenanispace.com/posts/first_post/</link>
+      <pubDate>Thu, 13 Nov 2025 16:10:45 +0100</pubDate>
+      <guid>https://www.guenanispace.com/posts/first_post/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;well done ! (for test only)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finally, I made it happen. Here is where all my future content will live (for the foreseeable future). I’m really excited. I have a ton of blog post ideas in the pipeline of all the things I’ve been learning lately related to Image processing, automation, Linux System Administration and CLIs, to name a few.&lt;/p&gt;
+&lt;p&gt;I hope you’re excited too. Keep an eye out for more posts! 👀&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
