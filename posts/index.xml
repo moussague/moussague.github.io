@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Moussa GUENANI</title>
+    <link>https://www.guenanispace.com/posts/</link>
+    <description>Recent content in Posts on Moussa GUENANI</description>
+    <generator>Hugo -- 0.154.4</generator>
+    <language>en-us</language>
+    <atom:link href="https://www.guenanispace.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello, it&#39;s me</title>
+      <link>https://www.guenanispace.com/posts/first_post/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.guenanispace.com/posts/first_post/</guid>
+      <description>Finally, I made it happen.</description>
+    </item>
+    <item>
+      <title>Personal Notes on Public Key Authentication</title>
+      <link>https://www.guenanispace.com/posts/personal-notes-on-public-key-authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.guenanispace.com/posts/personal-notes-on-public-key-authentication/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;SSH (Secure Shell) in a network protocol used for communication securely between two devices. it is primarily used to connect to remote machines, such as servers and workstations, from various client devices, including laptops, and mobile phones.
+For the authentication SSH offers several methods: passwords (which are less secure), public key authentication (more secure), and other less common techniques like two-factor authentication.&lt;/p&gt;
+&lt;p&gt;To use SSH protocol with public key authentication, you typically follow three stages:
+&lt;strong&gt;1.Generate a key-pair&lt;/strong&gt;
+&lt;strong&gt;2.Install the public key on the server&lt;/strong&gt;
+&lt;strong&gt;3.Connect without a password&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SSH Port Forwarding: My Practical Notes</title>
+      <link>https://www.guenanispace.com/posts/ssh-port-forwarding---my-practical-notes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.guenanispace.com/posts/ssh-port-forwarding---my-practical-notes/</guid>
+      <description>&lt;p&gt;Personal notes from setting up SSH port forwarding.&lt;/p&gt;
+&lt;h2 id=&#34;local-port-forwarding&#34;&gt;Local Port Forwarding&lt;/h2&gt;
+&lt;p&gt;This allows you to access a remote service as if it were running locally.
+&lt;strong&gt;Use Case:&lt;/strong&gt; Accessing a database or service on a remote server that is not exposed to the public internet.&lt;/p&gt;
+&lt;h3 id=&#34;on-the-server&#34;&gt;On the server&lt;/h3&gt;
+&lt;p&gt;Start a service (example using a Python web server):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python -m http.server &lt;span style=&#34;color:#ae81ff&#34;&gt;1234&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;on-my-laptop&#34;&gt;On my laptop&lt;/h3&gt;
+&lt;p&gt;Forward local port &lt;code&gt;8080&lt;/code&gt; to remote port &lt;code&gt;1234&lt;/code&gt;:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
