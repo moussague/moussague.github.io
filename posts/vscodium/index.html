@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto" data-theme="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>VSCodium: Installation, Extensions, and Configuration | Moussa GUENANI</title>
+<meta name="keywords" content="">
+<meta name="description" content="If you have used Visual Studio Code (VS Code) and loved its features but felt uneasy about Microsoft&rsquo;s telemetry or licensing, VSCodium is a community-driven free and libre fork of VS Code.
+VSCodium gives us the same familiar editor, extensions, and interface, but without the Microsoft branding, tracking, or proprietary components. It is built directly from VS Code&rsquo;s open-source code (under the MIT licence) and stripped of any telemetry or usage data collection.">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.guenanispace.com/posts/vscodium/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style"><script defer src="https://cloud.umami.is/script.js" data-website-id="973f96af-3f5e-4e27-aa60-00418c1d063a"></script>
+<link rel="icon" href="https://www.guenanispace.com/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.guenanispace.com/assets/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.guenanispace.com/assets/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.guenanispace.com/assets/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.guenanispace.com/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://www.guenanispace.com/posts/vscodium/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+  
+  <script
+    defer
+    src="https://u.guenanispace.com/script.js"
+    data-website-id="145cdb25-8ebb-4ce8-ad4d-1012f596d619">
+  </script>
+
+<meta property="og:url" content="https://www.guenanispace.com/posts/vscodium/">
+  <meta property="og:site_name" content="Moussa GUENANI">
+  <meta property="og:title" content="VSCodium: Installation, Extensions, and Configuration">
+  <meta property="og:description" content="If you have used Visual Studio Code (VS Code) and loved its features but felt uneasy about Microsoft’s telemetry or licensing, VSCodium is a community-driven free and libre fork of VS Code.
+VSCodium gives us the same familiar editor, extensions, and interface, but without the Microsoft branding, tracking, or proprietary components. It is built directly from VS Code’s open-source code (under the MIT licence) and stripped of any telemetry or usage data collection.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-02-26T16:40:00+00:00">
+    <meta property="article:modified_time" content="2026-02-26T16:40:00+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="VSCodium: Installation, Extensions, and Configuration">
+<meta name="twitter:description" content="If you have used Visual Studio Code (VS Code) and loved its features but felt uneasy about Microsoft&rsquo;s telemetry or licensing, VSCodium is a community-driven free and libre fork of VS Code.
+VSCodium gives us the same familiar editor, extensions, and interface, but without the Microsoft branding, tracking, or proprietary components. It is built directly from VS Code&rsquo;s open-source code (under the MIT licence) and stripped of any telemetry or usage data collection.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://www.guenanispace.com/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "VSCodium: Installation, Extensions, and Configuration",
+      "item": "https://www.guenanispace.com/posts/vscodium/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "VSCodium: Installation, Extensions, and Configuration",
+  "name": "VSCodium: Installation, Extensions, and Configuration",
+  "description": "If you have used Visual Studio Code (VS Code) and loved its features but felt uneasy about Microsoft\u0026rsquo;s telemetry or licensing, VSCodium is a community-driven free and libre fork of VS Code.\nVSCodium gives us the same familiar editor, extensions, and interface, but without the Microsoft branding, tracking, or proprietary components. It is built directly from VS Code\u0026rsquo;s open-source code (under the MIT licence) and stripped of any telemetry or usage data collection.\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "If you have used Visual Studio Code (VS Code) and loved its features but felt uneasy about Microsoft’s telemetry or licensing, VSCodium is a community-driven free and libre fork of VS Code.\nVSCodium gives us the same familiar editor, extensions, and interface, but without the Microsoft branding, tracking, or proprietary components. It is built directly from VS Code’s open-source code (under the MIT licence) and stripped of any telemetry or usage data collection.\nIn this post, I will share how to install it on Debian-based operating systems and share my use cases, my favorite extensions, and configurations.\nInstallation # Pre-requirements sudo apt update; sudo apt install wget gnupg # Add the GPG key of the Repository wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg # Add the Repository echo -e 'Types: deb\\nURIs: https://download.vscodium.com/debs\\nSuites: vscodium\\nComponents: main\\nArchitectures: amd64 arm64\\nSigned-by: /usr/share/keyrings/vscodium-archive-keyring.gpg' | sudo tee /etc/apt/sources.list.d/vscodium.sources # Install codium sudo apt update \u0026\u0026 sudo apt install codium # Verify installation codium --version Key Extensions Vim Purpose: A Vim emulator for VSCodium. ID: vscodevim.vim\nLaTeX Workshop Purpose: Provides core functionality for LaTeX typesetting. ID: James-Yu.latex-workshop\nCitation Picker for Zotero Purpose: Adds Zotero integration to VSCodium. Requires the Better BibTeX plugin to be installed in Zotero. ID: mblode.zotero\nSyncing Purpose: an Extension for Sync the User Settings, Keybindings, Extensions, Locales and Snippets to a GitHub Gist. ID: nonoroazoro.syncing Configuration: Setup a personal token (with only one permission Gist) My shortcuts: (Super = Windows/Command key)\nAlt + Super + U =\u003e Upload Alt + Super + D =\u003e Download Integrating VSCodium with the Thunar file manager on Debian XFCE Thunar stores custom actions in .xml files located in ~/.config/Thunar/uca.xml (for user-specific actions).\nOpen the configuration file with a text editor: nano ~/.config/Thunar/uca.xml Add the following XML block between the tags: vscodium Open with VSCodium codium %f Open the selected file/folder in VSCodium * Save and exit. VSCodium Configuration (settings.json) VSCodium settings can be configured at two levels: 🌍 Global Settings (User-wide)\nApplied across all VS Code windows Located in: settings.json (user settings file) 📁 Workspace Settings (Project-specific) Specific to the current project only Located in: .vscode/settings.json (within your project folder) Note: workspace settings override global settings when both are present. Settings when working with Python Python Interpreter Configuration { \"python.defaultInterpreterPath\": \"/path/to/env\", // \"explorer.sortOrder\": \"modified\" } File Explorer: Exclude Files Purpose: Hides specified files/folders from the VS Code Explorer sidebar\n{ \"files.exclude\": { \"**/__pycache__\": true, // Hide Python cache directories \"**/*.pyc\": true, // Hide compiled Python files \"**/.pyc\": true // Hide .pyc files (alternate pattern) } } Search: Exclude Files Purpose: Prevents specified files/folders from appearing in search results\n{ \"search.exclude\": { \"**/__pycache__\": true, // Exclude cache directories from global search \"**/*.pyc\": true // Exclude compiled Python files from search } } Wrapping Up VSCodium offers the best of both worlds: the full power and extensibility of Visual Studio Code with complete freedom from telemetry and proprietary components. Whether you’re a privacy-conscious developer, working in a restricted environment, or simply prefer open-source software, VSCodium is a drop-in replacement that feels identical to VS Code while respecting your digital autonomy.\nWith VSCodium now installed and configured on your Debian system, key extensions are ready for development and document writing. This setup serves as the foundation for upcoming posts:\nInstalling TeX Live. Using VSCodium as a TeX Live editor Integrating Zotero with VSCodium Each guide will expand on today’s setup, turning VSCodium into a complete research and writing environment.\nlast update: 12-05-2026 (add TexLive post link)\n",
+  "wordCount" : "585",
+  "inLanguage": "en",
+  "datePublished": "2026-02-26T16:40:00Z",
+  "dateModified": "2026-02-26T16:40:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.guenanispace.com/posts/vscodium/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Moussa GUENANI",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.guenanispace.com/assets/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+<body id="top">
+    <header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.guenanispace.com/" accesskey="h" title="Moussa GUENANI (Alt + H)">Moussa GUENANI</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.guenanispace.com/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.guenanispace.com/posts/" title="Blog">
+                    <span>Blog</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.guenanispace.com/resources" title="Resources">
+                    <span>Resources</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      VSCodium: Installation, Extensions, and Configuration
+    </h1>
+    <div class="post-meta"><span title='2026-02-26 16:40:00 +0000 UTC'>February 26, 2026</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>If you have used Visual Studio Code (VS Code) and loved its features but felt uneasy about Microsoft&rsquo;s telemetry or licensing, <strong>VSCodium</strong> is a community-driven free and libre fork of VS Code.</p>
+<p>VSCodium gives us the same familiar editor, extensions, and interface, but without the Microsoft branding, tracking, or proprietary components. It is built directly from VS Code&rsquo;s open-source code (under the MIT licence) and stripped of any telemetry or usage data collection.</p>
+<p>In this post, I will share how to install it on <strong>Debian-based operating systems</strong> and share my use cases, my favorite extensions, and configurations.</p>
+<h2 id="installation">Installation<a hidden class="anchor" aria-hidden="true" href="#installation">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Pre-requirements</span>
+</span></span><span style="display:flex;"><span>sudo apt update; sudo apt install wget gnupg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add the GPG key of the Repository</span>
+</span></span><span style="display:flex;"><span>wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | gpg --dearmor | sudo dd of<span style="color:#f92672">=</span>/usr/share/keyrings/vscodium-archive-keyring.gpg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add the Repository</span>
+</span></span><span style="display:flex;"><span>echo -e <span style="color:#e6db74">&#39;Types: deb\nURIs: https://download.vscodium.com/debs\nSuites: vscodium\nComponents: main\nArchitectures: amd64 arm64\nSigned-by: /usr/share/keyrings/vscodium-archive-keyring.gpg&#39;</span> | sudo tee /etc/apt/sources.list.d/vscodium.sources
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Install codium</span>
+</span></span><span style="display:flex;"><span>sudo apt update <span style="color:#f92672">&amp;&amp;</span> sudo apt install codium
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Verify installation</span>
+</span></span><span style="display:flex;"><span>codium --version
+</span></span></code></pre></div><h2 id="key-extensions">Key Extensions<a hidden class="anchor" aria-hidden="true" href="#key-extensions">#</a></h2>
+<h3 id="vim">Vim<a hidden class="anchor" aria-hidden="true" href="#vim">#</a></h3>
+<p><strong>Purpose:</strong> A Vim emulator for VSCodium.
+<strong>ID:</strong> <code>vscodevim.vim</code></p>
+<h3 id="latex-workshop">LaTeX Workshop<a hidden class="anchor" aria-hidden="true" href="#latex-workshop">#</a></h3>
+<p><strong>Purpose:</strong> Provides core functionality for LaTeX typesetting.
+<strong>ID:</strong> <code>James-Yu.latex-workshop</code></p>
+<h3 id="citation-picker-for-zotero">Citation Picker for Zotero<a hidden class="anchor" aria-hidden="true" href="#citation-picker-for-zotero">#</a></h3>
+<p><strong>Purpose:</strong>  Adds Zotero integration to VSCodium. Requires the Better BibTeX plugin to be installed in Zotero.
+<strong>ID:</strong> <code>mblode.zotero</code></p>
+<h3 id="syncing">Syncing<a hidden class="anchor" aria-hidden="true" href="#syncing">#</a></h3>
+<p><strong>Purpose:</strong> an Extension for Sync the <code>User Settings</code>, <code>Keybindings</code>, <code>Extensions</code>, <code>Locales</code> and <code>Snippets</code> to a GitHub Gist.
+<strong>ID:</strong> <code>nonoroazoro.syncing</code>
+<strong>Configuration:</strong> Setup a personal token (with only one permission Gist)
+<strong>My shortcuts:</strong>
+(Super = Windows/Command key)</p>
+<ul>
+<li>Alt + Super + U =&gt; Upload</li>
+<li>Alt + Super + D =&gt; Download</li>
+</ul>
+<h2 id="integrating-vscodium-with-the-thunar-file-manager-on-debian-xfce">Integrating VSCodium with the Thunar file manager on Debian XFCE<a hidden class="anchor" aria-hidden="true" href="#integrating-vscodium-with-the-thunar-file-manager-on-debian-xfce">#</a></h2>
+<p>Thunar stores custom actions in <code>.xml</code> files located in <code>~/.config/Thunar/uca.xml</code> (for user-specific actions).</p>
+<ol>
+<li>Open the configuration file with a text editor:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano ~/.config/Thunar/uca.xml
+</span></span></code></pre></div></li>
+<li>Add the following XML block between the <code>&lt;actions&gt;</code> tags:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;action&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;icon&gt;</span>vscodium<span style="color:#f92672">&lt;/icon&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;name&gt;</span>Open with VSCodium<span style="color:#f92672">&lt;/name&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;command&gt;</span>codium %f<span style="color:#f92672">&lt;/command&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;description&gt;</span>Open the selected file/folder in VSCodium<span style="color:#f92672">&lt;/description&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;patterns&gt;</span>*<span style="color:#f92672">&lt;/patterns&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;directories/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;text-files/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;other-files/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/action&gt;</span>
+</span></span></code></pre></div></li>
+<li>Save and exit.</li>
+</ol>
+<h2 id="vscodium-configuration-settingsjson">VSCodium Configuration (<code>settings.json</code>)<a hidden class="anchor" aria-hidden="true" href="#vscodium-configuration-settingsjson">#</a></h2>
+<p>VSCodium settings can be configured at two levels:
+🌍 <strong>Global Settings</strong> (User-wide)</p>
+<ul>
+<li>Applied across all VS Code windows</li>
+<li>Located in: <code>settings.json</code> (user settings file)
+📁 <strong>Workspace Settings</strong> (Project-specific)</li>
+<li>Specific to the current project only</li>
+<li>Located in: <code>.vscode/settings.json</code> (within your project folder)
+<strong>Note:</strong> workspace settings override global settings when both are present.</li>
+</ul>
+<h3 id="settings-when-working-with-python">Settings when working with Python<a hidden class="anchor" aria-hidden="true" href="#settings-when-working-with-python">#</a></h3>
+<h4 id="python-interpreter-configuration">Python Interpreter Configuration<a hidden class="anchor" aria-hidden="true" href="#python-interpreter-configuration">#</a></h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;python.defaultInterpreterPath&#34;</span>: <span style="color:#e6db74">&#34;/path/to/env&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// &#34;explorer.sortOrder&#34;: &#34;modified&#34;
+</span></span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="file-explorer-exclude-files">File Explorer: Exclude Files<a hidden class="anchor" aria-hidden="true" href="#file-explorer-exclude-files">#</a></h4>
+<p>Purpose: Hides specified files/folders from the VS Code Explorer sidebar</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;files.exclude&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;**/__pycache__&#34;</span>: <span style="color:#66d9ef">true</span>,   <span style="color:#75715e">// Hide Python cache directories
+</span></span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;**/*.pyc&#34;</span>: <span style="color:#66d9ef">true</span>,         <span style="color:#75715e">// Hide compiled Python files
+</span></span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;**/.pyc&#34;</span>: <span style="color:#66d9ef">true</span>           <span style="color:#75715e">// Hide .pyc files (alternate pattern)
+</span></span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="search-exclude-files">Search: Exclude Files<a hidden class="anchor" aria-hidden="true" href="#search-exclude-files">#</a></h4>
+<p>Purpose: Prevents specified files/folders from appearing in search results</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;search.exclude&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;**/__pycache__&#34;</span>: <span style="color:#66d9ef">true</span>,   <span style="color:#75715e">// Exclude cache directories from global search
+</span></span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;**/*.pyc&#34;</span>: <span style="color:#66d9ef">true</span>          <span style="color:#75715e">// Exclude compiled Python files from search
+</span></span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="wrapping-up">Wrapping Up<a hidden class="anchor" aria-hidden="true" href="#wrapping-up">#</a></h2>
+<p>VSCodium offers the best of both worlds: the full power and extensibility of Visual Studio Code with complete freedom from telemetry and proprietary components. Whether you&rsquo;re a privacy-conscious developer, working in a restricted environment, or simply prefer open-source software, VSCodium is a drop-in replacement that feels identical to VS Code while respecting your digital autonomy.</p>
+<p><strong>With VSCodium now installed</strong> and configured on your Debian system, key extensions are ready for development and document writing. This setup serves as the foundation for upcoming posts:</p>
+<ul>
+<li><a href="/posts/tex_live/">Installing TeX Live</a>.</li>
+<li>Using VSCodium as a TeX Live editor</li>
+<li>Integrating Zotero with VSCodium</li>
+</ul>
+<p>Each guide will expand on today&rsquo;s setup, turning VSCodium into a complete research and writing environment.</p>
+<p>last update: 12-05-2026 (add TexLive post link)</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://www.guenanispace.com/">Moussa GUENANI</a></span> · 
+
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><script src="https://keepandroidopen.org/banner.js?lang=en&size=mini"></script>
+
+<script>
+    let menu = document.getElementById('menu');
+    if (menu) {
+        
+        const scrollPosition = localStorage.getItem("menu-scroll-position");
+        if (scrollPosition) {
+            menu.scrollLeft = parseInt(scrollPosition, 10);
+        }
+        
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        const html = document.querySelector("html");
+        if (html.dataset.theme === "dark") {
+            html.dataset.theme = 'light';
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            html.dataset.theme = 'dark';
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
